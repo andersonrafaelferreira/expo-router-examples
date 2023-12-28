@@ -1,28 +1,30 @@
 import { Fontisto } from '@expo/vector-icons';
-import { Tabs } from 'expo-router';
+import { Drawer } from 'expo-router/drawer';
 
-export default function TabsLayout() {
+export default function Layout() {
   return (
-    <Tabs
+    <Drawer
       screenOptions={{
-        tabBarInactiveTintColor: '#ea1d2c', 
+        drawerInactiveTintColor: '#ea1d2c', 
       }}
     >
-      <Tabs.Screen
+      <Drawer.Screen
         name="(drawer)/index" // Deve ter o mesmo nome do arquivo no diretório
         options={{
-          title: 'Home', // Título no Header da página
-          tabBarIcon: ({color, size}) => <Fontisto name='home' size={size} color={color}/>, // Ícone do item do menu lateral
+          drawerLabel: 'Home', // Título no menu lateral
+          title: 'Página inicial', // Título no Header da página
+          drawerIcon: ({color, size}) => <Fontisto name='home' size={size} color={color}/>, // Ícone do item do menu lateral
         }}
       />
-      <Tabs.Screen
+      <Drawer.Screen
         name="(drawer)/profile"
         options={{
-          title: 'Profile',
-          tabBarIcon: ({color, size}) => <Fontisto name='user-secret' size={size} color={color}/>,
+          title: 'Perfil do Utilizador',
+          drawerLabel: 'Perfil',
+          drawerIcon: ({color, size}) => <Fontisto name='user-secret' size={size} color={color}/>,
 
         }}
       />
-    </Tabs>
+    </Drawer>
   );
 }

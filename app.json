@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "com-drawer",
-    "slug": "com-drawer",
+    "name": "Expo Router",
+    "slug": "com-router",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
